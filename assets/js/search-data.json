@@ -105,17 +105,6 @@
 
   
       ,"page3": {
-          "title": "About Me",
-          "content": "Hi! My name is Sarayu Pochimireddy and this will be my website for the trimester where I will log all my work and progress. .",
-          "url": "https://sarayu-pr11.github.io/sarayucsa/about/",
-          "relUrl": "/about/",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page4": {
           "title": "College Board Notes",
           "content": "Unit # | Notes | Tangibles |   |   | . Unit 1 |   |   |   |   | . Unit 2 |   |   |   |   | .",
           "url": "https://sarayu-pr11.github.io/sarayucsa/_pages/collegeboard.html",
@@ -147,7 +136,7 @@
   
 
   
-      ,"page13": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://sarayu-pr11.github.io/sarayucsa/robots.txt",
