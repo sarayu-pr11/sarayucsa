@@ -98,13 +98,35 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#frq-lesson-methods-and-control-structures">FRQ Lesson: Methods and Control Structures</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#college-board-requirements">College Board Requirements</a></li>
+<li class="toc-entry toc-h2"><a href="#methods">Methods</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#calling-a-method">Calling a method</a></li>
+<li class="toc-entry toc-h3"><a href="#initializing-a-method">Initializing a Method</a></li>
+<li class="toc-entry toc-h3"><a href="#cb-example">CB Example</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#control-structures">Control Structures</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#ifelseelse-if">If/Else/Else If</a></li>
+<li class="toc-entry toc-h3"><a href="#switch">Switch</a></li>
+<li class="toc-entry toc-h3"><a href="#loops">Loops</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#college-board-requirements">College Board Requirements</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#helpful-links">Helpful Links</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul><h1 id="frq-lesson-methods-and-control-structures">
 <a class="anchor" href="#frq-lesson-methods-and-control-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>FRQ Lesson: Methods and Control Structures</h1>
+<h2 id="methods">
+<a class="anchor" href="#methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods</h2>
 <p>A method is something to be declared within a class. It only runs when it is called and you can pass parameters in a method. Methods are used to perform functions, and they are helpful since you can reuse code.</p>
 
+<h3 id="calling-a-method">
+<a class="anchor" href="#calling-a-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calling a method</h3>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Main {
     static void myMethod() {
         //code to be executed
@@ -112,8 +134,59 @@ window.onload = wrap_img;
 }
 
 </code></pre></div></div>
+<h3 id="initializing-a-method">
+<a class="anchor" href="#initializing-a-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initializing a Method</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private static void myFunction() {
+    // function body
+   }
+</code></pre></div></div>
+
+<h3 id="cb-example">
+<a class="anchor" href="#cb-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>CB Example</h3>
 <p><img src="https://user-images.githubusercontent.com/55467797/191194118-5d0fae8d-e46f-4d89-ac9f-205ca615047e.png" alt="image"></p>
 
+<h2 id="control-structures">
+<a class="anchor" href="#control-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control Structures</h2>
+<h3 id="ifelseelse-if">
+<a class="anchor" href="#ifelseelse-if" aria-hidden="true"><span class="octicon octicon-link"></span></a>If/Else/Else If</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (count &gt; 5) {
+    System.out.println("Count is higher than 5");
+    }
+    else if (count &gt; 2) {
+    System.out.println("Count is higher than 2");
+    }
+    else {
+    System.out.println("Count is lower than 2");
+    }
+</code></pre></div></div>
+
+<h3 id="switch">
+<a class="anchor" href="#switch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Switch</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int count = 3;
+switch (count) {
+case 0:
+    System.out.println("Count is equal to 0");
+    break;
+case 1:
+    System.out.println("Count is equal to 1");
+    break;
+default:
+    System.out.println("Count is either negative, or higher than 1");
+    break;
+}
+</code></pre></div></div>
+<h3 id="loops">
+<a class="anchor" href="#loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loops</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for (int i = 1; i &lt;= 50; i++) {
+    methodToRepeat();
+}
+
+int whileCounter = 1;
+while (whileCounter &lt;= 50) {
+    methodToRepeat();
+    whileCounter++;
+}
+</code></pre></div></div>
 <h2 id="college-board-requirements">
 <a class="anchor" href="#college-board-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>College Board Requirements</h2>
 <p>College board questions will include the following</p>
@@ -137,6 +210,11 @@ window.onload = wrap_img;
 
 <p>College board specifically says:
 <img src="https://user-images.githubusercontent.com/55467797/191193960-031c67a8-4af6-43e1-a896-71b91c25dc2e.png" alt="image"></p>
+
+<h4 id="helpful-links">
+<a class="anchor" href="#helpful-links" aria-hidden="true"><span class="octicon octicon-link"></span></a>Helpful Links</h4>
+<p><a href="https://www.khanacademy.org/computing/computer-programming/programming/object-oriented/pt/object-methods">Khan Academy</a>
+<a href="https://www.youtube.com/watch?v=8V4vsRVd-wE">AP Live Review</a></p>
 
 
   </div><!-- from https://github.com/utterance/utterances -->
