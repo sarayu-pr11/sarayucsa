@@ -18,6 +18,8 @@ public class Main {
 }
 
 ```
+![image](https://user-images.githubusercontent.com/55467797/191194118-5d0fae8d-e46f-4d89-ac9f-205ca615047e.png)
+
 ## College Board Requirements
 College board questions will include the following
 - a for-loop that probably uses the method’s parameter variables,
@@ -31,5 +33,6 @@ College board questions will include the following
 - if the question has 2 parts, 1 part will probably require a loop and the other just an expression
 
 College board specifically says:
-picture
+![image](https://user-images.githubusercontent.com/55467797/191193960-031c67a8-4af6-43e1-a896-71b91c25dc2e.png)
+
 
