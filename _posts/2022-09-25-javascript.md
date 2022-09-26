@@ -1,10 +1,9 @@
 ---
-keywords: fastai
-description: Javascript Learning
-title: Javascript
+description: JavaScript Data
+title: JavaScript Lesson
 toc: true
 layout: post
-categories: [jupyter]
+categories: [markdown]
 comments: true
 ---
 # Javascript
