@@ -4,9 +4,9 @@
         "post0": {
             "title": "Factors Function",
             "content": "import java.util.Scanner; public class factors { public static void main(String[] args) { Scanner fact = new Scanner(System.in); int number; while(true) { System.out.print(&quot;Input a Whole Number : &quot; + &quot; n&quot;); number = fact.nextInt(); System.out.print(&quot;Your factors are: &quot; + &quot; n&quot;); for (int i = 1; i &lt;= number; ++i ) { if (number % i == 0) { System.out.print(i + &quot; &quot; + &quot; n&quot;); } } } } } factors.main(null) . Input a Whole Number : .",
-            "url": "https://sarayu-pr11.github.io/sarayucsa/jupyter/2022/09/25/math.html",
-            "relUrl": "/jupyter/2022/09/25/math.html",
-            "date": " • Sep 25, 2022"
+            "url": "https://sarayu-pr11.github.io/sarayucsa/jupyter/2022/10/02/math.html",
+            "relUrl": "/jupyter/2022/10/02/math.html",
+            "date": " • Oct 2, 2022"
         }
         
     
