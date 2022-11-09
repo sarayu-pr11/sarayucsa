@@ -12,4 +12,4 @@ title: Homework and Notes
 | Using Objects | [Notes](https://sarayu-pr11.github.io/sarayucsa/2022/10/13/using-objects.html) | [Homework](https://sarayu-pr11.github.io/sarayucsa/2022/10/13/using-objects.html#Homework) | 
 | Iteration | [Notes](https://sarayu-pr11.github.io/sarayucsa/2022/10/19/iteration.html) | [Homework](https://sarayu-pr11.github.io/sarayucsa/2022/10/19/iteration.html#Homework) | 
 | Writing Classes | [Notes](https://sarayu-pr11.github.io/sarayucsa/2022/10/20/classes.html) | [Homework](https://sarayu-pr11.github.io/sarayucsa/2022/10/20/classes.html#Homework) |
-| Array | [Notes](url) | [Homework](url) |
+| Array | [Notes](https://sarayu-pr11.github.io/sarayucsa/2022/11/08/arrays.html) | [Homework](https://sarayu-pr11.github.io/sarayucsa/2022/11/08/arrays.html#HW) |
