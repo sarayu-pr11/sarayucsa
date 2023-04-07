@@ -990,21 +990,29 @@ Chocolate
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
 
+<span class="c1">//this hack wants you to add the elements one by one, print it out each time, then delete them one by one and print it out</span>
+<span class="c1">//the first part of the class first creates the array and I labeled it assignments to go with out project</span>
+<span class="c1">// the next part makes the actual queue manager that will hold the array</span>
+<span class="c1">//the first for loop is the add part because it goes through every element in the array and adds it to the queue manager</span>
+<span class="c1">// after the add method is finished, the for loop for the delete part begins</span>
+<span class="c1">//the delete method works by going through the array and deleting each element from the queue</span>
+<span class="c1">//after it prints it out, the output will look like a christmas tree</span>
+
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">QueueChangeTester</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// Create an array of strings representing FRQs</span>
         <span class="n">Object</span><span class="o">[]</span> <span class="n">Assignments</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="p">{</span> <span class="s">&quot;Arrays: Mastery Check 1&quot;</span><span class="p">,</span> <span class="s">&quot;Lists: Mastery Check 1&quot;</span><span class="p">,</span> <span class="s">&quot;Loops: Mastery Check 1&quot;</span><span class="p">,</span> <span class="s">&quot;Classes: Mastery Check 1&quot;</span><span class="p">};</span>
         
-        <span class="c1">// Create a new QueueManagerChanged object called qFRQs</span>
+        <span class="c1">// Create a new QueueManagerChanged object </span>
         <span class="n">QueueManagerChanged</span> <span class="n">qAssignments</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueueManagerChanged</span><span class="p">(</span><span class="s">&quot;Assignments&quot;</span><span class="p">);</span>
 
-        <span class="c1">// Iterate over the FRQs array and add each element to the qFRQs queue</span>
+        <span class="c1">// Iterate over the  array and add each element to the qFRQs queue</span>
         <span class="k">for</span> <span class="p">(</span><span class="n">Object</span> <span class="n">i</span> <span class="p">:</span> <span class="n">Assignments</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">qAssignments</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
             <span class="n">qAssignments</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span> <span class="c1">// Print the current state of the queue</span>
         <span class="p">}</span>
 
-        <span class="c1">// Iterate over the FRQs array again and delete each element from the qFRQs queue</span>
+        <span class="c1">// Iterate over the  array again and delete each element from the  queue</span>
         <span class="k">for</span> <span class="p">(</span><span class="n">Object</span> <span class="n">i</span> <span class="p">:</span> <span class="n">Assignments</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">qAssignments</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span>
             <span class="n">qAssignments</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span> <span class="c1">// Print the current state of the queue</span>
@@ -1064,7 +1072,13 @@ Assignments count: 0, data:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">QueueCombine</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// this hack works to merge two queues</span>
+<span class="c1">// the first part of the class is to initialize the two arrays with the numbers I want to merge and to intialize the the queue managers for each one </span>
+<span class="c1">// the next part was to add the integers in the arrays to the their respective queue manager</span>
+<span class="c1">//I then printed out each queue manager</span>
+<span class="c1">// next I worked to compare the two queue managers by saying that while both queues have numbers or elements, the </span>
+
+<span class="kd">class</span> <span class="nc">QueueCombine</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="c1">// Create three arrays of integers and three queue objects to hold them</span>
