@@ -114,8 +114,8 @@ window.onload = wrap_img;
         <span class="c1">// generate 5000 random elements</span>
             <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5000</span><span class="o">]</span><span class="p">;</span> <span class="c1">// creates a new array with 5000 integer</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="mi">5000</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10000</span><span class="p">);</span>
-            <span class="p">}</span> <span class="c1">// for loop generates the elements using random (math.random is only 0-1 so you mulitiply by 10000 to get bigger number)</span>
+            <span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">500</span><span class="p">);</span>
+            <span class="p">}</span> <span class="c1">// for loop generates the elements using random (math.random is only 0-1 so you mulitiply by 500 to get bigger number)</span>
             <span class="c1">// sort the array</span>
             <span class="n">start</span> <span class="o">+=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span> <span class="c1">// before you start the sorting, it stores the current time</span>
             <span class="n">selectionSort</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">array</span><span class="p">);</span> <span class="c1">// sorts</span>
@@ -169,32 +169,32 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Comparisons: 12497500
-Swaps: 4990
+Swaps: 4982
 Comparisons: 24995000
-Swaps: 9986
+Swaps: 9958
 Comparisons: 37492500
-Swaps: 14975
+Swaps: 14944
 Comparisons: 49990000
-Swaps: 19967
+Swaps: 19926
 Comparisons: 62487500
-Swaps: 24955
+Swaps: 24909
 Comparisons: 74985000
-Swaps: 29949
+Swaps: 29898
 Comparisons: 87482500
-Swaps: 34941
+Swaps: 34885
 Comparisons: 99980000
-Swaps: 39933
+Swaps: 39863
 Comparisons: 112477500
-Swaps: 44929
+Swaps: 44843
 Comparisons: 124975000
-Swaps: 49916
+Swaps: 49823
 Comparisons: 137472500
-Swaps: 54905
+Swaps: 54812
 Comparisons: 149970000
-Swaps: 59897
-Average time taken: 29 ms
+Swaps: 59799
+Average time taken: 15 ms
 Average comparisons: 12497500
-Average swaps: 4991
+Average swaps: 4983
 </pre>
 </div>
 </div>
@@ -208,7 +208,7 @@ Average swaps: 4991
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Evaluation:">Evaluation:<a class="anchor-link" href="#Evaluation:"> </a></h2><ul>
-<li>selection sort: 20 ms</li>
+<li>selection sort: 15 ms</li>
 <li>insertion sort: 6ms</li>
 <li>merge sort: 14 ms</li>
 <li>bubble sort: 22 ms</li>
