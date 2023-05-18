@@ -112,7 +112,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">null_pct</span> <span class="o">=</span> <span class="n">weather</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">weather</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">null_pct</span> <span class="o">=</span> <span class="n">weather</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">pd</span><span class="p">.</span><span class="na">isnull</span><span class="p">).</span><span class="na">sum</span><span class="p">()</span><span class="o">/</span><span class="n">weather</span><span class="p">.</span><span class="na">shape</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
 <span class="n">null_pct</span>
 </pre></div>
 
@@ -137,7 +137,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">valid_columns</span> <span class="o">=</span> <span class="n">weather</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">null_pct</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">]</span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">valid_columns</span> <span class="o">=</span> <span class="n">weather</span><span class="p">.</span><span class="na">columns</span><span class="o">[</span><span class="n">null_pct</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="o">]</span>
 <span class="n">valid_columns</span>
 </pre></div>
 
