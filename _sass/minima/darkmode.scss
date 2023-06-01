@@ -3,7 +3,7 @@ $med-emph: rgba(rgb(0, 0, 0), 0.69);
 $low-emph: rgba(rgb(0, 0, 0), 0.38);
 $dark-grey : #96a3c2; 
 // $dark-grey : #1F1B24;
-$overlay: mix($dark-grey, rgb(0, 0, 0), 95%);
+$overlay: mix($dark-grey, rgb(175, 175, 175), 95%);
 $overlay-light: mix($dark-grey, white, 86%);
 
 html, body, input, textarea, select, button {   
