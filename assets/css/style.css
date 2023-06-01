@@ -494,7 +494,7 @@ a:hover { color: rgba(0, 0, 0, 0.87) !important; }
 
 * { scrollbar-color: #96a3c2 #a5b0cb; }
 
-pre, code { border-color: #a5b0cb; background-color: #8f9bb8; }
+pre, code { border-color: #a5b0cb; background-color: #97a4c1; }
 
 .page-description { color: rgba(0, 0, 0, 0.69); }
 
@@ -502,11 +502,11 @@ pre, code { border-color: #a5b0cb; background-color: #8f9bb8; }
 
 .post-content p, .post-content li { color: rgba(0, 0, 0, 0.69); }
 
-.btn { background-color: #8f9bb8 !important; color: rgba(0, 0, 0, 0.87) !important; border-color: #a5b0cb !important; }
+.btn { background-color: #97a4c1 !important; color: rgba(0, 0, 0, 0.87) !important; border-color: #a5b0cb !important; }
 
 .btn:hover { background-color: #96a3c2 !important; }
 
-table th { background-color: #8f9bb8; border-color: #a5b0cb; color: rgba(0, 0, 0, 0.87); }
+table th { background-color: #97a4c1; border-color: #a5b0cb; color: rgba(0, 0, 0, 0.87); }
 
 table td { background-color: #96a3c2; border-color: #a5b0cb; color: rgba(0, 0, 0, 0.69); }
 
@@ -514,7 +514,7 @@ table td { background-color: #96a3c2; border-color: #a5b0cb; color: rgba(0, 0, 0
 
 canvas { filter: invert(100%); }
 
-.post-list > li > div { box-shadow: none !important; background-color: #8f9bb8; border: none !important; }
+.post-list > li > div { box-shadow: none !important; background-color: #97a4c1; border: none !important; }
 
 li .post-meta-description { color: rgba(0, 0, 0, 0.69) !important; }
 
