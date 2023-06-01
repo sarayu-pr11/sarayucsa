@@ -484,7 +484,7 @@ p code { font-size: 19px; }
 
 html, body, input, textarea, select, button { color: rgba(0, 0, 0, 0.87) !important; background-color: #96a3c2 !important; }
 
-a { color: #4bbaff !important; }
+a { color: black !important; }
 
 a:hover { color: rgba(0, 0, 0, 0.87) !important; }
 
