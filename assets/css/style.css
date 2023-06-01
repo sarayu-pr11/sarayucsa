@@ -494,7 +494,7 @@ a:hover { color: rgba(255, 255, 255, 0.87) !important; }
 
 * { scrollbar-color: #ffffff white; }
 
-pre, code { border-color: white; background-color: white; }
+pre, code { border-color: white; background-color: #f2f2f2; }
 
 .page-description { color: rgba(255, 255, 255, 0.69); }
 
@@ -502,11 +502,11 @@ pre, code { border-color: white; background-color: white; }
 
 .post-content p, .post-content li { color: rgba(255, 255, 255, 0.69); }
 
-.btn { background-color: white !important; color: rgba(255, 255, 255, 0.87) !important; border-color: white !important; }
+.btn { background-color: #f2f2f2 !important; color: rgba(255, 255, 255, 0.87) !important; border-color: white !important; }
 
 .btn:hover { background-color: #ffffff !important; }
 
-table th { background-color: white; border-color: white; color: rgba(255, 255, 255, 0.87); }
+table th { background-color: #f2f2f2; border-color: white; color: rgba(255, 255, 255, 0.87); }
 
 table td { background-color: #ffffff; border-color: white; color: rgba(255, 255, 255, 0.69); }
 
@@ -514,7 +514,7 @@ table td { background-color: #ffffff; border-color: white; color: rgba(255, 255,
 
 canvas { filter: invert(100%); }
 
-.post-list > li > div { box-shadow: none !important; background-color: white; border: none !important; }
+.post-list > li > div { box-shadow: none !important; background-color: #f2f2f2; border: none !important; }
 
 li .post-meta-description { color: rgba(255, 255, 255, 0.69) !important; }
 
