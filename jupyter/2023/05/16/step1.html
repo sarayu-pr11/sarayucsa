@@ -86,7 +86,7 @@ window.onload = wrap_img;
 <li>Download Data</li>
 <li>Read in and clean the data</li>
 <li>Train a machine learning model to make historical and future predictions</li>
-<li></li>
+<li>Make Predictions</li>
 </ol>
 
 </div>
@@ -140,6 +140,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="n">valid_columns</span> <span class="o">=</span> <span class="n">weather</span><span class="p">.</span><span class="na">columns</span><span class="o">[</span><span class="n">null_pct</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="o">]</span>
 <span class="n">valid_columns</span>
+<span class="n">weather</span> <span class="o">=</span> <span class="n">weather</span><span class="o">[</span><span class="n">valid_columns</span><span class="o">]</span><span class="p">.</span><span class="na">copy</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -151,7 +152,83 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This code snippet makes it so that we only keep the columns where the percentage of no values is less than 5%. All the columns that are outputted are the ones we will keep.</p>
+<p>This code snippet finds the colomns where the percentage of null values is less than 5%. Then it preserves only the valid colomns into "weather"</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">weather</span> <span class="o">=</span> <span class="n">weather</span><span class="p">.</span><span class="na">ffill</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This next line above fills in the remaining missing values in the preserved colomns. It fills it with the value from the day before.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">weather</span><span class="p">.</span><span class="na">index</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="na">to_datetime</span><span class="p">(</span><span class="n">weather</span><span class="p">.</span><span class="na">index</span><span class="p">)</span>
+<span class="n">weather</span><span class="p">.</span><span class="na">index</span><span class="p">.</span><span class="na">year</span>
+
+<span class="n">weather</span><span class="p">.</span><span class="na">index</span><span class="p">.</span><span class="na">year</span><span class="p">.</span><span class="na">value_counts</span><span class="p">().</span><span class="na">sort_index</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This changes our index to be stored as a date time, this way we can access the year of the index more easily. 
+Then we are able to sort by year and it counts how many time the unique year value shows up (counting how many records there are for each year). This is a way to verify that every single day has data as all years should either have 365 or 366 records.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">weather</span><span class="o">[</span><span class="s">&quot;target&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="n">weather</span><span class="p">.</span><span class="na">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">[</span><span class="s">&quot;tmax&quot;</span><span class="o">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, we create a target colomn in the weather data for predictions</p>
 
 </div>
 </div>
