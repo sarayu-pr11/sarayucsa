@@ -93,63 +93,63 @@ search_exclude: true
     <tbody id="weatherData">
     </tbody>
   </table>
-
-
-
+  
   <script>
-    let originalData = []; // Store original data
-    let filteredData = []; // Store filtered data
+    document.addEventListener('DOMContentLoaded', () => {
+      let originalData = []; // Store original data
+      let filteredData = []; // Store filtered data
 
-    // Fetch weather data
-    fetch('https://api.weatherapi.com/v1/forecast.json?key=9e0198f1aff848e6a6c53224230506&q=New%20York&days=5')
-      .then(response => response.json())
-      .then(data => {
-        originalData = data.forecast.forecastday;
-        filteredData = originalData;
+      // Fetch weather data
+      fetch('https://api.weatherapi.com/v1/forecast.json?key=9e0198f1aff848e6a6c53224230506&q=New%20York&days=5')
+        .then(response => response.json())
+        .then(data => {
+          originalData = data.forecast.forecastday;
+          filteredData = originalData;
 
-        displayData();
-      })
-      .catch(error => {
-        console.log('Error fetching weather data:', error);
-      });
+          displayData();
+        })
+        .catch(error => {
+          console.log('Error fetching weather data:', error);
+        });
 
-    function displayData() {
-      const weatherTable = document.getElementById('weatherData');
-      weatherTable.innerHTML = '';
+      function displayData() {
+        const weatherTable = document.getElementById('weatherData');
+        weatherTable.innerHTML = '';
 
-      filteredData.forEach(day => {
-        const date = new Date(day.date).toLocaleDateString();
-        const temperature = day.day.avgtemp_c;
-        const description = day.day.condition.text;
+        filteredData.forEach(day => {
+          const date = new Date(day.date).toLocaleDateString();
+          const temperature = day.day.avgtemp_c;
+          const description = day.day.condition.text;
 
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td>${date}</td>
-          <td>${temperature}°C</td>
-          <td>${description}</td>
-        `;
-        weatherTable.appendChild(row);
-      });
-    }
-
-    function refreshDates() {
-      filteredData = originalData;
-      displayData();
-    }
-
-    function filterData() {
-      const filter = document.getElementById('filterDropdown').value;
-
-      if (filter === 'all') {
-        filteredData = originalData;
-      } else if (filter === 'hot') {
-        filteredData = originalData.filter(day => day.day.avgtemp_c > 25);
-      } else if (filter === 'cold') {
-        filteredData = originalData.filter(day => day.day.avgtemp_c < 10);
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${date}</td>
+            <td>${temperature}°C</td>
+            <td>${description}</td>
+          `;
+          weatherTable.appendChild(row);
+        });
       }
 
-      displayData();
-    }
+      function refreshDates() {
+        filteredData = originalData;
+        displayData();
+      }
+
+      function filterData() {
+        const filter = document.getElementById('filterDropdown').value;
+
+        if (filter === 'all') {
+          filteredData = originalData;
+        } else if (filter === 'hot') {
+          filteredData = originalData.filter(day => day.day.avgtemp_c > 25);
+        } else if (filter === 'cold') {
+          filteredData = originalData.filter(day => day.day.avgtemp_c < 10);
+        }
+
+        displayData();
+      }
+    });
   </script>
 </body>
 </html>
