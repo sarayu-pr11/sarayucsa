@@ -2,14 +2,54 @@
 <head>
   <title>Weather Data</title>
   <style>
+    body {
+      background-color: #D3E6F7;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
     table {
       border-collapse: collapse;
       width: 100%;
+      margin-top: 20px;
+      background-color: #FFF;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+    
     th, td {
-      padding: 8px;
+      padding: 10px;
       text-align: left;
-      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #B3DDEF;
+      font-weight: bold;
+      color: #333;
+    }
+    
+    td {
+      border-bottom: 1px solid #E3F2FD;
+    }
+    
+    tbody tr:hover {
+      background-color: #F1F8FE;
+    }
+    
+    .unique {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .unique img {
+      max-width: 300px;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
   </style>
 </head>
@@ -26,6 +66,12 @@
     <tbody id="weatherData">
     </tbody>
   </table>
+
+  <div class="unique">
+    <img src="https://example.com/unique-image.jpg" alt="Unique Image">
+    <h2>Stay curious, stay creative!</h2>
+    <p>Here's a unique image to spark your imagination.</p>
+  </div>
 
   <script>
     // Fetch weather data
