@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Weather Data</title>
@@ -51,10 +52,30 @@
       border-radius: 50%;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
+    
+    .controls {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .controls button,
+    .controls select {
+      margin: 5px;
+    }
   </style>
 </head>
 <body>
   <h1>Weather Data</h1>
+
+  <div class="controls">
+    <button onclick="refreshDates()">Refresh Dates</button>
+    <select id="filterDropdown" onchange="filterData()">
+      <option value="all">All</option>
+      <option value="hot">Hot (>25°C)</option>
+      <option value="cold">Cold (<10°C)</option>
+    </select>
+  </div>
+
   <table id="weatherTable">
     <thead>
       <tr>
@@ -67,33 +88,62 @@
     </tbody>
   </table>
 
-  
+
 
   <script>
+    let originalData = []; // Store original data
+    let filteredData = []; // Store filtered data
+
     // Fetch weather data
     fetch('https://api.weatherapi.com/v1/forecast.json?key=9e0198f1aff848e6a6c53224230506&q=New%20York&days=5')
       .then(response => response.json())
       .then(data => {
-        const weatherData = data.forecast.forecastday;
-        const weatherTable = document.getElementById('weatherData');
+        originalData = data.forecast.forecastday;
+        filteredData = originalData;
 
-        weatherData.forEach(day => {
-          const date = new Date(day.date).toLocaleDateString();
-          const temperature = day.day.avgtemp_c;
-          const description = day.day.condition.text;
-
-          const row = document.createElement('tr');
-          row.innerHTML = `
-            <td>${date}</td>
-            <td>${temperature}°C</td>
-            <td>${description}</td>
-          `;
-          weatherTable.appendChild(row);
-        });
+        displayData();
       })
       .catch(error => {
         console.log('Error fetching weather data:', error);
       });
+
+    function displayData() {
+      const weatherTable = document.getElementById('weatherData');
+      weatherTable.innerHTML = '';
+
+      filteredData.forEach(day => {
+        const date = new Date(day.date).toLocaleDateString();
+        const temperature = day.day.avgtemp_c;
+        const description = day.day.condition.text;
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${date}</td>
+          <td>${temperature}°C</td>
+          <td>${description}</td>
+        `;
+        weatherTable.appendChild(row);
+      });
+    }
+
+    function refreshDates() {
+      filteredData = originalData;
+      displayData();
+    }
+
+    function filterData() {
+      const filter = document.getElementById('filterDropdown').value;
+
+      if (filter === 'all') {
+        filteredData = originalData;
+      } else if (filter === 'hot') {
+        filteredData = originalData.filter(day => day.day.avgtemp_c > 25);
+      } else if (filter === 'cold') {
+        filteredData = originalData.filter(day => day.day.avgtemp_c < 10);
+      }
+
+      displayData();
+    }
   </script>
 </body>
 </html>
